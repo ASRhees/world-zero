@@ -1,0 +1,5 @@
+c:\users\alexander\documents\visual studio 2015\Projects\WorldZero\CQRS\bin\Debug\CQRS.dll
+c:\users\alexander\documents\visual studio 2015\Projects\WorldZero\CQRS\bin\Debug\CQRS.pdb
+c:\users\alexander\documents\visual studio 2015\Projects\WorldZero\CQRS\obj\Debug\CQRS.csprojResolveAssemblyReference.cache
+c:\users\alexander\documents\visual studio 2015\Projects\WorldZero\CQRS\obj\Debug\CQRS.dll
+c:\users\alexander\documents\visual studio 2015\Projects\WorldZero\CQRS\obj\Debug\CQRS.pdb

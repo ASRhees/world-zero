@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8B282A6-D620-444C-80C1-76F8B01008B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Services</RootNamespace>
+    <AssemblyName>Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth\Attribute.cs" />
+    <Compile Include="Auth\AuthService.cs" />
+    <Compile Include="Auth\CreateIdentityCommand.cs" />
+    <Compile Include="Auth\Identity.cs" />
+    <Compile Include="Auth\IdentityDetailsQuery.cs" />
+    <Compile Include="Auth\IdentityName.cs" />
+    <Compile Include="Auth\IdentityRoleQuery.cs" />
+    <Compile Include="Auth\ModifyAttributesCommand.cs" />
+    <Compile Include="Auth\ModifyPermissionsCommand.cs" />
+    <Compile Include="Auth\Password.cs" />
+    <Compile Include="Auth\Permission.cs" />
+    <Compile Include="Auth\Role.cs" />
+    <Compile Include="Auth\SetRoleCommand.cs" />
+    <Compile Include="Auth\UpdatePasswordCommand.cs" />
+    <Compile Include="Auth\ValidateLoginCommand.cs" />
+    <Compile Include="BadgeService.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CommentService.cs" />
+    <Compile Include="FactionService.cs" />
+    <Compile Include="MessageService.cs" />
+    <Compile Include="Point\PointService.cs" />
+    <Compile Include="Point\Score.cs" />
+    <Compile Include="Point\ScoreItem.cs" />
+    <Compile Include="Point\ScoreSource.cs" />
+    <Compile Include="Point\SubmitBonusPointsCommand.cs" />
+    <Compile Include="Point\SubmitTaskPointsCommand.cs" />
+    <Compile Include="Point\SubmitVotePointsCommand.cs" />
+    <Compile Include="Point\TaskPointsTotalQuery.cs" />
+    <Compile Include="Point\TaskPointTotalQuery.cs" />
+    <Compile Include="Point\UserPointsContributedQuery.cs" />
+    <Compile Include="Point\UserPointTotalContributedQuery.cs" />
+    <Compile Include="Point\UserScoreItemsQuery.cs" />
+    <Compile Include="Point\UserScoreQuery.cs" />
+    <Compile Include="ProfileService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelationshipService.cs" />
+    <Compile Include="TaskService.cs" />
+    <Compile Include="UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{65EDD3E9-C664-499E-ABA4-EF57FD58296C}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS\CQRS.csproj">
+      <Project>{5BCB8A57-BB4B-4FFA-A4A7-60CAC3DE2CCA}</Project>
+      <Name>CQRS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
