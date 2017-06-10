@@ -4,9 +4,14 @@ namespace Services.Point
 {
     public class Score : SemanticType<double>
     {
-        public Score(double score) : base((val) => true, score)
+        double score;//this is the score which is stored
+        public Score(double scoreToAdd) : base((val) => true, scoreToAdd)
         {
-            
+            score = scoreToAdd;
+        }
+        public Score()
+        {
+            score = 0;
         }
     }
 }
